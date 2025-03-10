@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: ghcr.io/YOUR_USERNAME/k8s-gitops/hello-app:latest  # This will be replaced with your actual image
+        image: tomcroll/hello-app:latest  # Updated to use Docker Hub image
         ports:
         - containerPort: 8080
         env:
