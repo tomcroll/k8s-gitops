@@ -1,0 +1,29 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Helm
+charts/*/charts/
+charts/*/Chart.lock
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*~ 

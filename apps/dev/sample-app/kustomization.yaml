@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: sample-app
+
+resources:
+- namespace.yaml
+- ../../templates/web-app.yaml
+
+configMapGenerator:
+- name: sample-app-config
+  literals:
+  - APP_NAME=sample-app
+  - NAMESPACE=sample-app
+  - REPLICAS=2
+  - IMAGE=nginx
+  - TAG=latest
+  - PORT=80
+  - CPU_REQUEST=100m
+  - MEMORY_REQUEST=128Mi
+  - CPU_LIMIT=200m
+  - MEMORY_LIMIT=256Mi 
